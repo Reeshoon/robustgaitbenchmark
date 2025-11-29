@@ -66,29 +66,17 @@
     
 
     <div class="section-divider"></div>
+    
+    <h2>Noise Types & Impact</h2>
+
     <div class="img-wrapper">
         <img src="images/noise_overview.png" class="img-noise" alt="Noise Overview">
     </div>
-    <h2>Noise Types & Impact</h2>
-
     <p>
-        RobustGait evaluates 15 real-world corruption types across four categories:
-    </p>
-
-    <p><b>• Digital Noise:</b> Gaussian, Poisson, impulse, noise artifacts.<br>
-    Strongest negative effect — breaks silhouette edges and sharply reduces Rank-1 accuracy.</p>
-
-    <p><b>• Environmental Noise:</b> fog, rain, frost, brightness shifts.<br>
-    Moderate impact — global contrast changes, but body structure remains mostly intact.</p>
-
-    <p><b>• Temporal Noise:</b> motion blur, frame drop, jitter.<br>
-    Affects motion cues; performance drops when temporal consistency is lost.</p>
-
-    <p><b>• Occlusion:</b> random blocks, partial covering.<br>
-    Removes key body parts; hurts all architectures, especially CNN-based models.</p>
-
-    <p>
-        Overall, digital noise and occlusion cause the largest accuracy drops, while environmental and mild temporal distortions are comparatively less harmful.
+        RobustGait evaluates real-world degradations across digital, environmental, temporal, and occlusion-based noise. 
+        Digital noise and occlusions cause the strongest performance drops because they distort or remove key body structures needed for silhouette extraction. 
+        Environmental and temporal noise affect appearance and motion but generally preserve shape, leading to more moderate degradation. 
+        Overall, the benchmark reveals that gait models remain most vulnerable when structural integrity of the silhouette is compromised.
     </p>
 
     <div class="section-divider"></div>
