@@ -39,16 +39,31 @@
         <a class="button" href="" target="_blank">📄 Paper</a>
         <a class="button" href="https://arxiv.org/abs/2511.13065" target="_blank">📝 arXiv</a>
         <a class="button" href="https://github.com/Reeshoon/RobustGait" target="_blank">💻 Code</a>
+        <a class="button" href="" target="_blank">📂 Data</a>
     </div>
     
     <div class="img-wrapper">
         <img src="images/pipeline.png" class="img-pipeline" alt="Pipeline Image">
     </div>
 
-    <div class="img-wrapper">
-        <img src="images/teaser.drawio.png" class="img-teaser" alt="Teaser Image">
-    </div>
+    <div class="teaser-main">
 
+        <!-- Top Row -->
+        <div class="top-two">
+            <img src="images/teaser_left.png" class="teaser-top" alt="Left Block">
+            <img src="images/teaser_middle.png" class="teaser-top" alt="Middle Block">
+        </div>
+    
+        <!-- Bottom Row -->
+        <div class="bottom-one">
+            <img src="images/teaser_right.png" class="teaser-bottom" alt="Right Block">
+        </div>
+    
+    </div>
+    
+    
+    
+    <div class="section-divider"></div>
      <!-- Abstract -->
      <h2>Abstract</h2>
      <p>
@@ -67,17 +82,18 @@
 
     <div class="section-divider"></div>
     
-    <h2>Noise Types & Impact</h2>
+    <h2>Robustness Under Real-World Noise</h2>
 
-    <div class="img-wrapper">
-        <img src="images/noise_overview.png" class="img-noise" alt="Noise Overview">
-    </div>
     <p>
         RobustGait evaluates real-world degradations across digital, environmental, temporal, and occlusion-based noise. 
         Digital noise and occlusions cause the strongest performance drops because they distort or remove key body structures needed for silhouette extraction. 
         Environmental and temporal noise affect appearance and motion but generally preserve shape, leading to more moderate degradation. 
         Overall, the benchmark reveals that gait models remain most vulnerable when structural integrity of the silhouette is compromised.
     </p>
+
+    <div class="img-wrapper">
+        <img src="images/noise_overview.png" class="img-noise" alt="Noise Overview">
+    </div>
 
     <div class="section-divider"></div>
 
@@ -89,24 +105,49 @@
     </p>
 
     <div class="img-wrapper">
-        <img src="images/seg_extractors.png" class="img-segmod" alt="Segmentation Comparison">
+        <img src="images/segmod.png" class="img-segmod" alt="Segmentation Comparison">
     </div>
 
     <div class="section-divider"></div>
 
     <h2>Robustness of Gait Models</h2>
     <p>
-        Our analysis shows that gait models are:
-        <br><br>
-        • <b>Most robust</b> to environmental and temporal noise  
-        • <b>Most vulnerable</b> to digital noise and occlusion  
-        <br>
-        CNN models fail under local corruptions, while transformer architectures (e.g., SwinGait) maintain stable performance.
+        Gait models are most robust to environmental and temporal noise, but struggle with digital distortions and occlusion.
+         Transformers show the strongest overall robustness, while CNNs degrade most under local corruptions, and set-based models 
+         remain stable under temporal disruptions. Overall, robustness depends strongly on both the type of perturbation and the model architecture.
     </p>
 
     <div class="img-wrapper">
-        <img src="images/noise_severity.png" class="img-noise" alt="Noise Severity Performance">
+        <img src="images/gait_models_robustness_analysis.png" class="img-noise" alt="Noise Severity Performance">
     </div>
+
+    <div class="section-divider"></div>
+
+    <h2>Deployment Scenarios</h2>
+    <p>
+        Deployment scenarios reveal that gait models can struggle when training and testing conditions differ. 
+        When the gallery is noisy, performance drops sharply because both reference and query features become degraded, 
+        making matching difficult. Models are also highly sensitive to changes in silhouette extraction pipelines—training 
+        on one extractor and testing on another leads to large accuracy drops. Finally, cross-dataset evaluation shows that 
+        the best-performing extractor depends on dataset characteristics, highlighting that both dataset structure and extraction 
+        method strongly influence real-world performance.
+    </p>
+
+    <div class="image-grid">
+
+        <!-- Top Row -->
+        <div class="row">
+            <img src="images/cross_parser_casia.png" class="half-img" alt="Cross Parser">
+            <img src="images/absolute_noisy_vs_gallery_comparison.png" class="half-img" alt="Absolute Robustness">
+        </div>
+    
+        <!-- Bottom Row -->
+        <div class="row">
+            <img src="images/cross_dataset_bars.png" class="full-img" alt="Cross Dataset Bars">
+        </div>
+    
+    </div>
+    
 
     <div class="section-divider"></div>
 
@@ -114,13 +155,13 @@
     <p>
         We propose two effective strategies:
         <br><br>
-        ✔ <b>Noise-Aware Training:</b> Train with RGB-level noise → improves robustness but slightly reduces clean accuracy.<br>
-        ✔ <b>Distillation with LoRA:</b> A clean-teacher guides a noisy-student → preserves clean accuracy while improving robustness.
+        <b>Noise-Aware Training:</b> Train with RGB-level noise, improves robustness but slightly reduces clean accuracy.<br>
+        <b>Distillation with LoRA:</b> A clean-teacher guides a noisy-student, preserves clean accuracy while improving robustness.
     </p>
 
-    <div class="img-wrapper">
+    <!-- <div class="img-wrapper">
         <img src="images/distillation.png" class="img-segmod" alt="Distillation Diagram">
-    </div>
+    </div> -->
 
     <div class="section-divider"></div>
 

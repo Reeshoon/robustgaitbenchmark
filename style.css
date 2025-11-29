@@ -10,7 +10,7 @@ body {
 .container {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 40px 20px;
+    padding: 20px 20px;
     text-align: center;
 }
 
@@ -101,13 +101,13 @@ p {
 }
 
 /* Individual image sizes */
-.img-teaser {
-    width: 1500px;
+/* .img-teaser {
+    width: 1100px;
     height: auto;
-}
+} */
 
 .img-pipeline {
-    width: 700px;
+    width: 600px;
     height: auto;
 }
 
@@ -117,7 +117,7 @@ p {
 }
 
 .img-segmod {
-    width: 600px;
+    width: 1000px;
     height: auto;
 }
 
@@ -128,3 +128,86 @@ p {
     background: #ddd;
     margin: 50px auto;
 }
+
+/* TEASER SECTION */
+
+/* overall wrapper */
+.teaser-main {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto 40px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* space between rows */
+}
+
+/* row of two images */
+.top-two {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* spacing between the two top boxes */
+}
+
+/* top box sizing */
+.teaser-top {
+    width: 100%;
+    max-width: 400px;  /* adjust size of top blocks */
+    display: block;
+}
+
+/* bottom box sizing (slightly bigger) */
+.teaser-bottom {
+    width: 100%;
+    max-width: 650px; /* green block gets more width */
+    display: block;
+    margin: 0 auto;
+}
+
+/* mobile stacking */
+@media (max-width: 900px) {
+    .top-two {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+.image-grid {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;          /* spacing between images */
+    margin-bottom: 30px;
+}
+
+/* Top two images: side-by-side with equal size */
+.half-img {
+    width: 40%;         /* equal size */
+    height: auto;
+    object-fit: contain;
+}
+
+/* Bottom image: centered full width */
+.full-img {
+    width: 80%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Responsiveness for mobile */
+@media (max-width: 900px) {
+    .row {
+        flex-direction: column;
+    }
+    .half-img {
+        width: 100%;
+    }
+}
+
+
+
+
