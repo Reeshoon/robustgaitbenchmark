@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RobustGait: Robustness Analysis for Appearance-Based Gait Recognition</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #fafafa;
+            color: #222;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 38px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        .authors {
+            font-size: 18px;
+            color: #3366cc;
+            margin-bottom: 8px;
+        }
+        .affiliation {
+            font-size: 15px;
+            color: #555;
+            margin-bottom: 4px;
+        }
+        .conference {
+            font-size: 18px;
+            font-weight: 600;
+            color: #b30000;
+            margin-bottom: 25px;
+        }
+        /* Buttons */
+        .button-row {
+            margin: 20px 0 35px 0;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 18px;
+            margin: 6px;
+            background: #333;
+            color: white;
+            border-radius: 25px;
+            font-size: 15px;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+        .button:hover {
+            background: #555;
+        }
+        /* Section titles */
+        h2 {
+            font-size: 26px;
+            margin-top: 50px;
+            font-weight: 600;
+        }
+        p {
+            max-width: 850px;
+            margin: 0 auto 20px auto;
+            font-size: 17px;
+        }
+        .placeholder {
+            width: 90%;
+            max-width: 900px;
+            height: 300px;
+            border: 2px dashed #bbb;
+            border-radius: 8px;
+            margin: 20px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #777;
+            font-size: 18px;
+        }
+        .footer {
+            margin-top: 50px;
+            font-size: 14px;
+            color: #777;
+            padding-bottom: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Title -->
+    <h1>RobustGait: Robustness Analysis for Appearance-Based Gait Recognition</h1>
+
+    <!-- Authors -->
+    <div class="authors">
+        Reeshoon Sayera,
+        Akash Kumar,
+        Sirshapan Mitra,
+        Prudvi Kamtam,
+        Yogesh S Rawat
+    </div>
+
+    <!-- Affiliation -->
+    <div class="affiliation"> University of Central Florida</div>
+
+    <!-- Conference -->
+    <div class="conference">WACV 2026</div>
+
+    <!-- Buttons -->
+    <div class="button-row">
+        <a class="button" href="" target="_blank">📄 Paper</a>
+        <a class="button" href="https://arxiv.org/abs/2511.13065" target="_blank">📝 arXiv</a>
+        <a class="button" href="https://github.com/Reeshoon/RobustGait" target="_blank">💻 Code</a>
+        <!-- <a class="button" href="#" target="_blank">📑 Slides</a>
+        <a class="button" href="#" target="_blank">🖼️ Poster</a> -->
+    </div>
+    
+
+    <iframe src="images/teaser.pdf" width="100%" height="600px" style="border:none;"></iframe>
+    <img src="images/noise_overview.png" class="hero-img" alt="Noise Overview">
+    <iframe src="images/segmod.pdf" width="100%" height="600px" style="border:none;"></iframe>
+    
+
+
+    <!-- Abstract -->
+    <h2>Abstract</h2>
+    <p>
+        Appearance-based gait recognition have achieved strong performance on controlled datasets, yet systematic evaluation of its robustness to 
+        real-world corruptions and silhouette variability remains lacking. We present RobustGait, a framework for fine-grained robustness evaluation 
+        of appearance-based gait recognition systems. RobustGait evaluation spans four dimensions: the type of perturbation (digital, environmental, 
+        temporal, occlusion), the silhouette extraction method (segmentation and parsing networks), the architectural capacities of gait recognition models, 
+        and various deployment scenarios. The benchmark introduces 15 corruption types at 5 severity levels across CASIA-B, CCPG, and SUSTech1K, 
+        with in-the-wild validation on MEVID, and evaluates six state-of-the-art gait systems. We came across several exciting insights. 
+        First, applying noise at the RGB level better reflects real-world degradation, and reveal how distortions propagate through silhouette extraction to 
+        the downstream gait recognition systems. Second, gait accuracy is highly sensitive to silhouette extractor biases, revealing an overlooked source of benchmark bias. 
+        Third, robustness is dependent on both the type of perturbation and the architectural design. Finally, we explore robustness-enhancing strategies, showing that noise-aware
+         training and knowledge distillation improve performance and move toward deployment-ready systems.
+        
+    </p>
+
+    <!-- Method Overview -->
+    <h2>Method Overview</h2>
+    <div class="placeholder">Method Diagram Placeholder</div>
+
+    <p>Replace this placeholder with your method overview figure.</p>
+
+    <!-- Results -->
+    <h2>Sample Results</h2>
+    <div class="placeholder">Results Figure Placeholder</div>
+
+    <p>Replace this with evaluation results or performance graphs.</p>
+
+    <!-- Citation -->
+    <h2>Citation</h2>
+    <pre style="background:#eee; padding:20px; text-align:left; max-width:800px; margin:0 auto; border-radius:8px;">
+@inproceedings{sayera2026robustgait,
+  title={RobustGait: Robustness Analysis for Appearance-Based Gait Recognition},
+  author={Sayera, Reeshoon and Kumar, A and Mitra, S and Kamtam, P},
+  booktitle={WACV},
+  year={2026}
+}
+    </pre>
+
+    <div class="footer">
+        © 2025 RobustGait Authors — MIT License
+    </div>
+
+</div>
+
+</body>
+</html>
