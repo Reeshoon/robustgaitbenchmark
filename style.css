@@ -1,3 +1,4 @@
+/* GLOBAL BASE STYLE */
 body {
     font-family: 'Inter', sans-serif;
     margin: 0;
@@ -10,14 +11,27 @@ body {
 .container {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 20px 20px;
+    padding: 20px;
     text-align: center;
 }
 
+/* TEXT */
 h1 {
     font-size: 38px;
     font-weight: 700;
     margin-bottom: 5px;
+}
+
+h2 {
+    font-size: 26px;
+    margin-top: 50px;
+    font-weight: 600;
+}
+
+p {
+    max-width: 850px;
+    margin: 0 auto 20px;
+    font-size: 17px;
 }
 
 .authors {
@@ -39,10 +53,8 @@ h1 {
     margin-bottom: 25px;
 }
 
-/* Buttons */
-.button-row {
-    margin: 20px 0 35px 0;
-}
+/* BUTTONS */
+.button-row { margin: 20px 0 35px; }
 
 .button {
     display: inline-block;
@@ -56,72 +68,80 @@ h1 {
     transition: 0.2s;
 }
 
-.button:hover {
-    background: #555;
-}
+.button:hover { background: #555; }
 
-h2 {
-    font-size: 26px;
-    margin-top: 50px;
-    font-weight: 600;
-}
-
-p {
-    max-width: 850px;
-    margin: 0 auto 20px auto;
-    font-size: 17px;
-}
-
-.placeholder {
-    width: 90%;
-    max-width: 900px;
-    height: 300px;
-    border: 2px dashed #bbb;
-    border-radius: 8px;
-    margin: 20px auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #777;
-    font-size: 18px;
-}
-
-.footer {
-    margin-top: 50px;
-    font-size: 14px;
-    color: #777;
-    padding-bottom: 40px;
-}
-
-/* Make all images centered */
-.img-wrapper {
+/* IMAGE WRAPPER */
+.img-center {
     width: 100%;
     text-align: center;
     margin-bottom: 30px;
 }
 
-/* Individual image sizes */
-/* .img-teaser {
-    width: 1100px;
-    height: auto;
-} */
+/* FIXED DESKTOP SIZES — KEEPING YOUR EXACT VALUES */
+.img-pipeline { width: 600px; height: auto; }
+.img-noise     { width: 1000px; height: auto; }
+.img-seg       { width: 1000px; height: auto; }
+.img-robustness { width: 800px; height: auto; }
 
-.img-pipeline {
-    width: 600px;
-    height: auto;
+/* TEASER STACK */
+.teaser-stack {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-.img-noise {
-    width: 1000px;
+.teaser-img-small {
+    max-width: 400px;
+    width: 100%;
     height: auto;
+    margin: 0 auto;
 }
 
-.img-segmod {
-    width: 1000px;
+.teaser-img-large {
+    max-width: 600px;
+    width: 100%;
     height: auto;
+    margin: 0 auto;
 }
 
-/* Section Divider */
+/* 2×1 + full-width grid */
+.image-grid { max-width: 1300px; margin: 0 auto; }
+
+.image-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.half-img {
+    width: 30%;
+    height: auto;
+    object-fit: contain;
+}
+
+.full-img {
+    width: 60%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* BIBTEX BOX */
+.bibtex-box {
+    background: #eee;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 8px;
+    text-align: left;
+    overflow-x: auto;
+}
+
+/* DIVIDER */
 .section-divider {
     width: 100%;
     height: 2px;
@@ -129,85 +149,53 @@ p {
     margin: 50px auto;
 }
 
-/* TEASER SECTION */
-
-/* overall wrapper */
-.teaser-main {
-    width: 100%;
-    max-width: 1300px;
-    margin: 0 auto 40px auto;
-    display: flex;
-    flex-direction: column;
-    gap: 25px; /* space between rows */
+/* FOOTER */
+.footer {
+    margin-top: 50px;
+    font-size: 14px;
+    color: #777;
+    padding-bottom: 40px;
 }
 
-/* row of two images */
-.top-two {
-    display: flex;
-    justify-content: center;
-    gap: 20px; /* spacing between the two top boxes */
-}
-
-/* top box sizing */
-.teaser-top {
-    width: 100%;
-    max-width: 400px;  /* adjust size of top blocks */
-    display: block;
-}
-
-/* bottom box sizing (slightly bigger) */
-.teaser-bottom {
-    width: 100%;
-    max-width: 650px; /* green block gets more width */
-    display: block;
-    margin: 0 auto;
-}
-
-/* mobile stacking */
+/* ========================================= */
+/*             MOBILE RESPONSIVE             */
+/* ========================================= */
 @media (max-width: 900px) {
-    .top-two {
-        flex-direction: column;
-        gap: 20px;
+
+    h1 { font-size: 28px; }
+    h2 { font-size: 22px; }
+    p  { font-size: 16px; padding: 0 10px; }
+
+    .button { font-size: 14px; padding: 8px 14px; }
+
+    /* Images scale to screen width but preserve aspect */
+    .img-pipeline,
+    .img-noise,
+    .img-seg,
+    .img-robustness {
+        width: 100%;
+        max-width: 100%;
     }
-}
 
-.image-grid {
-    max-width: 1300px;
-    margin: 0 auto;
-}
-
-.row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;          /* spacing between images */
-    margin-bottom: 30px;
-}
-
-/* Top two images: side-by-side with equal size */
-.half-img {
-    width: 40%;         /* equal size */
-    height: auto;
-    object-fit: contain;
-}
-
-/* Bottom image: centered full width */
-.full-img {
-    width: 80%;
-    height: auto;
-    object-fit: contain;
-}
-
-/* Responsiveness for mobile */
-@media (max-width: 900px) {
-    .row {
-        flex-direction: column;
-    }
-    .half-img {
+    .half-img, .full-img {
         width: 100%;
     }
+
+    .image-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .teaser-img-small,
+    .teaser-img-large {
+        max-width: 100%;
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    .bibtex-box {
+        font-size: 14px;
+    }
 }
-
-
-
-
