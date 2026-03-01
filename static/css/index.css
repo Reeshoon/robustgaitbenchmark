@@ -1,0 +1,268 @@
+body {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+
+.footer .icon-link {
+    font-size: 25px;
+    color: #000;
+}
+
+.link-block a {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.dnerf {
+  font-variant: small-caps;
+}
+
+
+.teaser .hero-body {
+  padding-top: 0;
+  padding-bottom: 3rem;
+  background: transparent;
+  box-shadow: none;
+  border: none ;
+  border-radius: 0;
+}
+
+.teaser {
+  font-family: 'Google Sans', sans-serif;
+}
+
+.publication-title {
+}
+
+.publication-banner {
+  max-height: parent;
+
+}
+
+.publication-banner video {
+  position: relative;
+  left: auto;
+  top: auto;
+  transform: none;
+  object-fit: fit;
+}
+
+.publication-header .hero-body {
+}
+
+.publication-title {
+    font-family: 'Google Sans', sans-serif;
+}
+
+.publication-authors {
+    font-family: 'Google Sans', sans-serif;
+}
+
+.publication-venue {
+    color: #555;
+    width: fit-content;
+    font-weight: bold;
+}
+
+.publication-awards {
+    color: #ff3860;
+    width: fit-content;
+    font-weight: bolder;
+}
+
+.publication-authors {
+}
+
+.publication-authors a {
+   color: hsl(204, 86%, 53%) !important;
+}
+
+.publication-authors a:hover {
+    text-decoration: underline;
+}
+
+.author-block {
+  display: inline-block;
+}
+
+.publication-banner img {
+}
+
+.publication-authors {
+  /*color: #4286f4;*/
+}
+
+.publication-video {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+
+    overflow: hidden;
+    border-radius: 10px !important;
+}
+
+.publication-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.publication-body img {
+}
+
+.results-carousel {
+  overflow: hidden;
+}
+
+.results-carousel .item {
+  margin: 5px;
+  overflow: hidden;
+  border: 1px solid #bbb;
+  border-radius: 10px;
+  padding: 0;
+  font-size: 0;
+}
+
+.results-carousel video {
+  margin: 0;
+}
+
+
+.interpolation-panel {
+  background: #f5f5f5;
+  border-radius: 10px;
+}
+
+.interpolation-panel .interpolation-image {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.interpolation-video-column {
+}
+
+.interpolation-panel .slider {
+  margin: 0 !important;
+}
+
+.interpolation-panel .slider {
+  margin: 0 !important;
+}
+
+#interpolation-image-wrapper {
+  width: 100%;
+}
+#interpolation-image-wrapper img {
+  border-radius: 5px;
+}
+
+
+/* fixed frame: forces SAME visible size */
+.teaser-box{
+  width: 100%;          /* same width for all */
+  height: 150px;         /* same height for all */
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* image fits INSIDE the frame */
+.teaser-box img{
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.teaser-caption{
+  margin-top: 10px;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.teaser-flex{
+  display: flex;
+  justify-content: center;
+  gap: 5px;           /* control closeness here */
+  flex-wrap: wrap;     /* stacks nicely on mobile */
+}
+.teaser-item{ text-align: center; }
+
+.small-plot {
+  max-width: 500px;   /* adjust size here */
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+
+/* Card container like the screenshot */
+.deployment-card{
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 14px;
+  padding: 18px 18px;
+}
+
+/* Each scenario row */
+.deployment-row{
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;   /* text left, figure right */
+  gap: 18px;
+  align-items: center;
+  padding: 14px 6px;
+}
+
+.deployment-row + .deployment-row{
+  border-top: 1px solid #f0f0f0;      /* subtle divider between scenarios */
+}
+
+/* Left text block */
+.deployment-title{
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.deployment-text ul{
+  margin-top: 6px;
+  margin-left: 1.1em;
+}
+
+/* Right figure block */
+.deployment-fig{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.deployment-fig img{
+  width: 100%;
+  max-width: 350px;   /* controls how big the right-side plot is */
+  height: auto;
+  display: block;
+}
+
+/* Mobile: stack text above image */
+@media (max-width: 768px){
+  .deployment-row{
+    grid-template-columns: 1fr;
+  }
+  .deployment-fig img{
+    max-width: 100%;
+  }
+}
+
+.author-names {
+  color: #5E60CE;
+}
+
+.has-text-grey {
+  color: #D62828 !important;
+}

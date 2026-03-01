@@ -1,166 +1,356 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RobustGait: Robustness Analysis for Appearance-Based Gait Recognition</title>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="RobustGait: a fine-grained benchmark for robustness analysis of appearance-based gait recognition under real-world corruptions and silhouette extraction variability.">
+  <meta name="keywords" content="RobustGait, Gait Recognition, Robustness, Silhouette Extraction, WACV">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RobustGait: Robustness Analysis for Appearance-Based Gait Recognition</title>
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Fonts  -->
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
-    <!-- External CSS -->
-    <link rel="stylesheet" href="style.css">
+  <!-- Bulma + Icons -->
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+  <!-- Your site CSS -->
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/index.js"></script>
 </head>
 
 <body>
-<div class="container">
 
-    <!-- Title -->
-    <h1>RobustGait: Robustness Analysis for Appearance-Based Gait Recognition</h1>
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">RobustGait: Robustness Analysis for Appearance-Based Gait Recognition</h1>
 
-    <!-- Authors -->
-    <div class="authors">Reeshoon Sayera, Akash Kumar, Sirshapan Mitra, Prudvi Kamtam, Yogesh S Rawat</div>
+          <div class="is-size-5 publication-authors author-names">
+            <span class="author-block">Reeshoon Sayera</span>,
+            <span class="author-block">Akash Kumar</span>,
+            <span class="author-block">Sirshapan Mitra</span>,
+            <span class="author-block">Prudvi Kamtam</span>,
+            <span class="author-block">Yogesh S Rawat</span>
+          </div>
 
-    <!-- Affiliation -->
-    <div class="affiliation">University of Central Florida</div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">University of Central Florida</span>
+          </div>
 
-    <!-- Conference -->
-    <div class="conference">WACV 2026</div>
+          <div class="is-size-6 has-text-grey">
+            WACV 2026
+          </div>
 
-    <!-- Buttons -->
-    <div class="button-row">
-        <a class="button" href="" target="_blank">📄 Paper</a>
-        <a class="button" href="https://arxiv.org/abs/2511.13065" target="_blank">📝 arXiv</a>
-        <a class="button" href="https://github.com/Reeshoon/RobustGait" target="_blank">💻 Code</a>
-        <a class="button" href="" target="_blank">📂 Data</a>
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- Paper -->
+              <span class="link-block">
+                <a href="https://wacv.thecvf.com/virtual/2026/poster/739" class="external-link button is-normal is-rounded is-dark" aria-disabled="true">
+                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- arXiv -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2511.13065" target="_blank" rel="noopener"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="ai ai-arxiv"></i></span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code -->
+              <span class="link-block">
+                <a href="https://github.com/Reeshoon/RobustGait" target="_blank" rel="noopener"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fab fa-github"></i></span>
+                  <span>Code</span>
+                </a>
+              </span>
+              <!-- Data -->
+              <!-- <span class="link-block">
+                <a href="#" class="external-link button is-normal is-rounded is-dark" aria-disabled="true">
+                  <span class="icon"><i class="far fa-images"></i></span>
+                  <span>Data</span>
+                </a>
+              </span> -->
+              <!-- Poster -->
+              <span class="link-block">
+                <a href="https://wacv.thecvf.com/media/PosterPDFs/WACV%202026/739.png?"
+                  target="_blank"
+                  rel="noopener"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fas fa-image"></i></span>
+                  <span>Poster</span>
+                </a>
+              </span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Teaser -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img class="teaser-image" src="./static/images/pipeline.gif" alt="RobustGait pipeline overview">
+      <p class="teaser-caption has-text-centered"> In appearance-based gait recognition silhouettes extracted from RGB video is fed into the recognition model.</p>
+    </div>
+  </div>
+
+  <!-- TOP -->
+  <div class="columns is-centered">
+    <div class="column has-text-centered">
+      <div class="teaser-box">
+        <img src="./static/images/teaser_left.png" alt="">
+      </div>
+      <p class="teaser-caption">Variable silhouette quality from variable extractor leads to evaluation bias. </p>
+    </div>
+  </div>
+
+  <!-- BOTTOM -->
+  <div class="teaser-flex is-gapless">
+    <div class="teaser-item is-2">
+      <div class="teaser-box"><img src="./static/images/teaser_middle.png" alt=""></div>
+      <p class="teaser-caption">Direct silhouette corruption <br> limits perturbations to basic augmentations.</p>
     </div>
 
-    <!-- Pipeline Image -->
-    <div class="img-center">
-        <img src="images/pipeline.png" class="img-pipeline" alt="Pipeline Image">
+    <div class="teaser-item is-2">
+      <div class="teaser-box"><img src="./static/images/teaser_right.png" alt=""></div>
+      <p class="teaser-caption">Noise applied to raw RGB <br> instead of silhouette masks </p>
+    </div>
+  </div>
+</section>
+
+<hr class="section-hr">
+
+<section class="section" id="Abstract">
+  <div class="container is-max-desktop">
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Appearance-based gait recognition have achieved strong performance on controlled datasets, yet systematic evaluation of its robustness
+            to real-world corruptions and silhouette variability remains lacking. We present RobustGait, a framework for fine-grained robustness
+            evaluation of appearance-based gait recognition systems.
+          </p>
+          <p>
+            RobustGait evaluation spans four dimensions: the type of perturbation (digital, environmental, temporal, occlusion), the silhouette
+            extraction method (segmentation and parsing networks), the architectural capacities of gait recognition models, and various deployment scenarios.
+            The benchmark introduces 15 corruption types at 5 severity levels across CASIA-B, CCPG, and SUSTech1K, with in-the-wild validation on MEVID,
+            and evaluates six state-of-the-art gait systems.
+          </p>
+          <p>
+            We find: (1) applying noise at the RGB level better reflects real-world degradation and reveals how distortions propagate through silhouette extraction,
+            (2) gait accuracy is highly sensitive to silhouette extractor biases, (3) robustness depends on both perturbation type and model architecture, and
+            (4) noise-aware training and knowledge distillation improve deployment readiness.
+          </p>
+        </div>
+      </div>
     </div>
 
-    <!-- Teaser Stack -->
-    <div class="teaser-stack">
-        <img src="images/teaser_left.png" class="teaser-img-small" alt="Left Block">
-        <img src="images/teaser_middle.png" class="teaser-img-small" alt="Middle Block">
-        <img src="images/teaser_right.png" class="teaser-img-large" alt="Right Block">
-    </div>
+  </div>
+</section>
 
-    <div class="section-divider"></div>
+<hr class="section-hr">
 
-    <!-- Abstract -->
-    <h2>Abstract</h2>
-    <p>
-    Appearance-based gait recognition have achieved strong performance on controlled datasets, yet systematic evaluation of its robustness
-    to real-world corruptions and silhouette variability remains lacking. We present RobustGait, a framework for fine-grained robustness
-    evaluation of appearance-based gait recognition systems.
-    RobustGait evaluation spans four dimensions: the type of perturbation (digital, environmental, temporal, occlusion), the silhouette
-    extraction method (segmentation and parsing networks), the architectural capacities of gait recognition models, and various deployment scenarios.
-    The benchmark introduces 15 corruption types at 5 severity levels across CASIA-B, CCPG, and SUSTech1K, with in-the-wild validation on MEVID,
-    and evaluates six state-of-the-art gait systems.
-    We came across several exciting insights. First, applying noise at the RGB level better reflects real-world degradation, and reveal how distortions
-    propagate through silhouette extraction to the downstream gait recognition systems. Second, gait accuracy is highly sensitive to silhouette extractor biases,
-    revealing an overlooked source of benchmark bias. Third, robustness is dependent on both the type of perturbation and the architectural design.
-    Finally, we explore robustness-enhancing strategies, showing that noise-aware training and knowledge distillation improve performance and move toward
-    deployment-ready systems.
-    </p>
+<section class="section" id="Results">
+  <div class="container is-max-desktop">
 
-    <div class="section-divider"></div>
+    <!-- <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3 has-text-centered">Key Results</h2>
+      </div>
+    </div> -->
 
     <!-- Noise Overview -->
-    <h2>Robustness Under Real-World Noise</h2>
-    <p>
-    RobustGait evaluates real-world degradations across digital, environmental, temporal, and occlusion-based noise.
-    Digital noise and occlusions cause the strongest performance drops because they distort or remove key body structures needed for silhouette extraction.
-    Environmental and temporal noise affect appearance and motion but generally preserve shape, leading to more moderate degradation.
-    Overall, the benchmark reveals that gait models remain most vulnerable when structural integrity of the silhouette is compromised.
-    </p>
-
-    <div class="img-center">
-        <img src="images/noise_overview.png" class="img-noise" alt="Noise Overview" loading="lazy">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h3 class="title is-3 has-text-centered">Robustness Under Real-World Noise</h3>
+        <div class="content has-text-justified">
+          <p>
+            RobustGait evaluates degradations across digital, environmental, temporal, and occlusion noise.
+            Digital noise and occlusions cause the strongest drops by distorting or removing body structure critical for silhouette extraction.
+            Environmental and temporal noise tend to preserve shape, leading to more moderate degradation.
+          </p>
+        </div>
+        <div class="has-text-centered">
+          <img src="./static/images/noise_overview.png" class="result-image" alt="Noise overview" loading="lazy">
+        </div>
+      </div>
+      
     </div>
+    <div class="column is-full-width">
+        <div class="has-text-centered">
+          <img src="./static/images/robustness_by_noise_type.png" width="300" class="result-image" alt="Noise overview" loading="lazy">
+        </div>
+      </div>
 
-    <div class="section-divider"></div>
+    <hr class="section-hr">
 
     <!-- Silhouette Extraction Bias -->
-    <h2>Silhouette Extraction Bias</h2>
-    <p>
-    Different silhouette extractors produce vastly different silhouette quality. This leads to
-    <b>unfair benchmark comparisons</b> and can alter Rank-1 accuracy by more than 20%.
-    High-IoU extractors (SCHP, M2FP) preserve structure better and significantly boost gait model performance.
-    </p>
-
-    <div class="img-center">
-        <img src="images/segmod.png" class="img-seg" alt="Segmentation Comparison" loading="lazy">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h3 class="title is-3 has-text-centered">Silhouette Extraction Bias</h3>
+        <div class="content has-text-justified">
+          <p>
+            Different silhouette extractors can drastically change silhouette quality, causing unfair comparisons across datasets.
+            Higher segmentation IoU (mask quality) corresponds to higher Rank-1 recognition accuracy across gait models.
+          </p>
+        </div>
+        <div class="has-text-centered">
+          <img src="./static/images/segmod.png" class="result-image" alt="Segmentation comparison" loading="lazy">
+        </div>
+        <div class="has-text-centered">
+          <img src="./static/images/segmentation_all3.png" class="result-image" alt="Segmentation vs iou comparison" loading="lazy">
+        </div>
+      </div>
     </div>
 
-    <div class="section-divider"></div>
+    <hr class="section-hr">
 
-    <!-- Robustness of Gait Models -->
-    <h2>Robustness of Gait Models</h2>
-    <p>
-    Gait models are most robust to environmental and temporal noise, but struggle with digital distortions and occlusion.
-    Transformers show the strongest overall robustness, while CNNs degrade most under local corruptions, and set-based models remain
-    stable under temporal disruptions.
-    Overall, robustness depends strongly on both the type of perturbation and the model architecture.
-    </p>
-
-    <div class="img-center">
-        <img src="images/gait_models_robustness_analysis.png" class="img-robustness" alt="Noise Severity Performance" loading="lazy">
+    <!-- Model Robustness -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h3 class="title is-3 has-text-centered">Robustness of Gait Models</h3>
+        <div class="content has-text-justified">
+          <p>
+            Robustness varies by architecture: transformers often show stronger overall robustness,
+            while CNNs degrade more under local corruptions; smaller set-based models are more robust to temporal noise compared to larger CNN models.
+.
+          </p>
+        </div>
+        <div class="has-text-centered small-plot">
+          <img src="./static/images/gait_models_robustness_analysis.png" class="result-image narrow" alt="Gait model robustness" loading="lazy">
+        </div>
+      </div>
     </div>
 
-    <div class="section-divider"></div>
+    <hr class="section-hr">
 
+    <!-- Deployment -->
     <!-- Deployment Scenarios -->
-    <h2>Deployment Scenarios</h2>
-    <p>
-    Deployment scenarios reveal that gait models can struggle when training and testing conditions differ.
-    When the gallery is noisy, performance drops sharply because both reference and query features become degraded, making matching difficult.
-    Models are also highly sensitive to changes in silhouette extraction pipelines — training on one extractor and testing on another
-    leads to large accuracy drops.
-    Finally, cross-dataset evaluation shows that the best-performing extractor depends on dataset characteristics,
-    highlighting that both dataset structure and extraction method strongly influence real-world performance.
-    </p>
+<div class="columns is-centered">
+  <div class="column is-full-width">
+    <h3 class="title is-3 has-text-centered">Deployment Scenarios</h3>
 
-    <div class="image-grid">
-        <div class="image-row">
-            <img src="images/cross_parser_casia.png" class="half-img" alt="Cross Parser" loading="lazy">
-            <img src="images/absolute_noisy_vs_gallery_comparison.png" class="half-img" alt="Absolute Robustness" loading="lazy">
+    <div class="deployment-card">
+
+      <!-- Scenario 1 -->
+      <div class="deployment-row">
+        <div class="deployment-text">
+          <p class="deployment-title">Scenario 1: Both probe and gallery are noisy</p>
+          <p>
+            When both the probe and the gallery contain noise, recognition performance drops significantly. Models trained only on clean data tend to rely on clean silhouette features, so when noise appears in both sets, matching becomes unstable. A clean gallery can partially stabilize recognition, but when noise affects both sides, errors compound and accuracy degrades.
+          </p>
         </div>
-        <div class="image-row">
-            <img src="images/cross_dataset_bars.png" class="full-img" alt="Cross Dataset Bars" loading="lazy">
+        <div class="deployment-fig">
+          <img src="./static/images/absolute_noisy_vs_gallery_comparison.png"
+               alt="Noisy probe vs gallery"
+               loading="lazy">
         </div>
+      </div>
+
+      <!-- Scenario 2 -->
+      <div class="deployment-row">
+        <div class="deployment-text">
+          <p class="deployment-title">Scenario 2: Cross-extractor evaluation</p>
+          <p>
+            Gait models are highly sensitive to the silhouette extraction pipeline. If a model is trained using silhouettes from one extractor but evaluated using another, performance drops noticeably. This mismatch reveals hidden evaluation bias and shows that recognition accuracy depends not only on the gait model, but also on how silhouettes are generated.
+          </p>
+        </div>
+        <div class="deployment-fig">
+          <img src="./static/images/cross_parser_analysis.png"
+               alt="Cross-extractor heatmap"
+               loading="lazy">
+        </div>
+      </div>
+
+      <!-- Scenario 3 -->
+      <div class="deployment-row">
+        <div class="deployment-text">
+          <p class="deployment-title">Scenario 3: Cross-dataset transfer</p>
+          <p>
+            Even when using the same silhouette extractor, performance changes across datasets due to differences in environment, camera setup, and data characteristics. An extractor or model that performs best on one dataset may not generalize to another, highlighting the importance of evaluating robustness across domains.
+          </p>
+        </div>
+        <div class="deployment-fig">
+          <img src="./static/images/cross_dataset_analysis.png"
+               alt="Cross-dataset bars"
+               loading="lazy">
+        </div>
+      </div>
+
     </div>
-
-    <div class="section-divider"></div>
-
-    <!-- Improving Robustness -->
-    <!-- <h2>Improving Robustness</h2>
-    <p>
-        We propose two effective strategies:<br><br>
-
-        <b>Noise-Aware Training:</b> Train with RGB-level noise, improves robustness but slightly reduces clean accuracy.<br><br>
-
-        <b>Distillation with LoRA:</b> A clean-teacher guides a noisy-student, preserves clean accuracy while improving robustness.
-    </p>
-
-    <div class="section-divider"></div> -->
-
-    <!-- Citation -->
-    <h2>Citation</h2>
-    <pre class="bibtex-box">
-        @inproceedings{
-            sayera2026robustgait,
-            title={{ RobustGait: Robustness Analysis for Appearance-Based Gait Recognition }},
-            author={Reeshoon Sayera and Akash Kumar and Sirshapan Mitra and Prudvi Kamtam and Yogesh S Rawat},
-            booktitle={Winter Conference on Applications of Computer Vision (WACV)},
-            year={2026},
-            url={https://arxiv.org/abs/2511.13065}
-        }
-    </pre>
-
-    <div class="footer">© 2025 RobustGait Authors — MIT License</div>
+  </div>
 </div>
+
+
+
+</section>
+
+<hr class="section-hr">
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title is-3 has-text-centered">BibTeX</h2>
+    <pre><code>@inproceedings{sayera2026robustgait,
+  title     = {RobustGait: Robustness Analysis for Appearance-Based Gait Recognition},
+  author    = {Sayera, Reeshoon and Kumar, Akash and Mitra, Sirshapan and Kamtam, Prudvi and Rawat, Yogesh S.},
+  booktitle = {Winter Conference on Applications of Computer Vision (WACV)},
+  year      = {2026},
+  url       = {https://arxiv.org/abs/2511.13065}
+}</code></pre>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p class="has-text-centered">
+            Website template adapted from <a href="https://nerfies.github.io" target="_blank" rel="noopener">Nerfies</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Bulma burger toggle
+  document.addEventListener('DOMContentLoaded', () => {
+    const burgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+    if (burgers.length > 0) {
+      burgers.forEach(el => {
+        el.addEventListener('click', () => {
+          const target = el.dataset.target;
+          const menu = document.getElementById(target);
+          el.classList.toggle('is-active');
+          menu.classList.toggle('is-active');
+        });
+      });
+    }
+  });
+</script>
+
 </body>
 </html>
