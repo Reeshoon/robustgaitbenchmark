@@ -291,3 +291,42 @@ body {
     object-fit: contain;
   }
 }
+
+/* Mobile: make ALL teaser boxes the same size + stack vertically */
+@media (max-width: 768px){
+
+  /* stack the bottom row vertically */
+  .teaser-flex{
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    justify-items: center;
+    gap: 16px;
+  }
+
+  /* same width for each item (bottom row) */
+  .teaser-flex .teaser-item{
+    width: 100% !important;
+    max-width: 340px !important;
+  }
+
+  /* ALSO constrain the top (it’s inside Bulma columns) */
+  .teaser .columns .teaser-box,
+  .teaser-flex .teaser-box{
+    width: 100% !important;
+    max-width: 340px !important;
+    height: 170px !important;     /* pick one height for all */
+    margin: 0 auto !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  /* force images to respect the frame */
+  .teaser .columns .teaser-box img,
+  .teaser-flex .teaser-box img{
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    display: block;
+  }
+}
